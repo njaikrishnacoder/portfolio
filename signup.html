@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - N.JAI KRISHNA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+    .gradient-bg {
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+      background-size: 300% 300%;
+      animation: gradientMove 6s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .slide-left {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    @keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; } /* shift to the right */
+}
+
+.animated-text-gradient {
+  background: linear-gradient(
+    90deg, /* left to right gradient */
+    #48ec4b,
+    #ff3700,
+    #272adb,
+    #48ec4b
+  );
+  background-size: 200% 200%;
+  animation: gradientText 8s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+  </style>
+</head>
+<body class="font-sans">
+  <!-- Header -->
+  <header class="gradient-bg p-4 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold animated-text-gradient">N.JAI KRISHNA</a>
+      <nav class="space-x-6 hidden md:block">
+        <a href="index.html" class="hover:text-gray-200">Home</a>
+        <a href="about.html" class="hover:text-gray-200">About</a>
+        <a href="contact.html" class="hover:text-gray-200">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sign Up Form -->
+  <section class="max-w-md mx-auto mt-16 bg-gray-800 p-8 rounded-lg shadow-lg">
+    <h2 class="text-3xl font-bold mb-6 text-center">Sign Up</h2>
+    <form action="#" method="POST">
+      <div class="mb-6">
+        <label class="block text-gray-300 mb-2">Full Name</label>
+        <input type="text" class="w-full p-3 rounded-lg bg-gray-700 text-white" placeholder="Your Full Name" required>
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-300 mb-2">Email</label>
+        <input type="email" class="w-full p-3 rounded-lg bg-gray-700 text-white" placeholder="Your Email" required>
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-300 mb-2">Password</label>
+        <input type="password" class="w-full p-3 rounded-lg bg-gray-700 text-white" placeholder="Create Password" required>
+      </div>
+      <button type="submit" class="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-3 rounded-lg font-bold hover:opacity-90">Sign Up</button>
+    </form>
+    <p class="text-center text-gray-400 mt-4">
+      Already have an account? 
+      <a href="signin.html" id="go-signin" class="text-pink-400 hover:underline">Sign In</a>
+    </p>
+  </section>
+
+  <script>
+    document.getElementById("go-signin").addEventListener("click", function(e) {
+      e.preventDefault();
+      document.body.classList.add("slide-left");
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 600);
+    });
+  </script>
+</body>
+</html>

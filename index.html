@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome - Jai Krishna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: -1;
+      animation: moveGrid 20s linear infinite;
+    }
+    @keyframes moveGrid {
+      from { background-position: 0 0; }
+      to { background-position: 40px 40px; }
+    }
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+    }
+    .gradient-bg {
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+    }
+    .animated-gradient {
+      background-size: 300% 300%;
+      animation: gradientMove 6s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes gradientText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animated-text-gradient {
+      background: linear-gradient(90deg, #48ec4b, #ff3700, #272adb);
+      background-size: 300% 300%;
+      animation: gradientText 6s ease infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+
+</head>
+<body class="font-sans">
+  <!-- Header -->
+  <header class="gradient-bg animated-gradient p-4 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold animated-text-gradient">N.JAI KRISHNA</a>
+      <nav class="space-x-6 hidden md:block">
+        <a href="index.html" class="hover:text-gray-200">Home</a>
+        <a href="about.html" class="hover:text-gray-200">About</a>
+        <a href="contact.html" class="hover:text-gray-200">Contact</a>
+      </nav>
+      <a href="signin.html" class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-6 py-3 rounded-lg font-bold text-white shadow-lg hover:opacity-90">Sign In</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-8">
+    <div class="flex-1">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Welcome to My Webpage</h2>
+      <p class="mb-6 text-lg text-gray-300">Crafting intuitive, high-performance applications with Python, Flutter, Postman, Figma, and MySQL — building seamless digital experiences as an App Developer.</p>
+      <a href="about.html" class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-6 py-3 rounded-lg font-bold text-white shadow-lg hover:opacity-90">Get Started</a>
+    </div>
+    <div class="flex-1">
+      <img src="1234.jpg" alt="Hero Image" class="rounded-lg shadow-lg" />
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Quote One</h3>
+      <p class="text-yellow-400">I'm not in this world to live up to your expectations and you're not in this world to live up to mine.”; “Real living is living for others.”</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Quote Two</h3>
+      <p class="text-yellow-400">“The key to immortality is first living a life worth remembering.”; "If you don't like your destiny, don't accept it. Instead, have the courage to change it the way you want it to be."</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-2">Quote Three</h3>
+      <p class="text-yellow-400">"Once you question your own belief, it's over"; "When a man cries it doesn't mean he's weak, it means he's been strong for too long"</p>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="gradient-bg animated-gradient py-12">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 text-center gap-6">
+      <div>
+        <a href="https://www.instagram.com/jk_the_mass/" target="_blank" class="text-3xl font-bold">Instagram</a>       
+        <p class="text-gray-100"></p>
+      </div>
+      <div>
+        <a href="https://www.youtube.com/@JKTronix" class="text-3xl font-bold">Youtube</a>
+        <p class="text-gray-100"></p>
+      </div>
+      <div>
+        <a class="text-3xl font-bold">Linkedin</a>
+        <p class="text-gray-100"></p>
+      </div>
+      <div>
+        <a class="text-3xl font-bold">Resume</a>
+        <p class="text-gray-100"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 p-6 mt-12">
+    <div class="max-w-7xl mx-auto text-center text-gray-400">
+      <p>&copy; 2025 Your Brand. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

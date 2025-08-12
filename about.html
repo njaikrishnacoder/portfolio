@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - N.JAI KRISHNA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+    }
+    .gradient-bg {
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+    }
+    .animated-gradient {
+      background-size: 300% 300%;
+      animation: gradientMove 6s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; } /* shift to the right */
+}
+
+.animated-text-gradient {
+  background: linear-gradient(
+    90deg, /* left to right gradient */
+    #48ec4b,
+    #ff3700,
+    #272adb,
+    #48ec4b
+  );
+  background-size: 200% 200%;
+  animation: gradientText 8s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+  </style>
+</head>
+<body class="font-sans">
+  <!-- Header -->
+  <header class="gradient-bg animated-gradient p-4 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold animated-text-gradient">N.JAI KRISHNA</a>
+      <nav class="space-x-6 hidden md:block">
+        <a href="index.html" class="hover:text-gray-200">Home</a>
+        <a href="about.html" class="hover:text-gray-200">About</a>
+        <a href="contact.html" class="hover:text-gray-200">Contact</a>
+      </nav>
+      <a href="signin.html" class="bg-pink-500 px-4 py-2 rounded-lg hover:bg-pink-600">Sign In</a>
+    </div>
+  </header>
+
+  <!-- About Me Section -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-4xl font-extrabold mb-6 text-center">About Me</h2>
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+      <p class="mb-4 text-lg text-gray-300">
+        Hi, I’m <span class="text-pink-400 font-semibold">N.JAI KRISHNA</span>, an aspiring <strong>App Developer</strong> passionate about turning ideas into impactful digital solutions.  
+      </p>
+      <p class="mb-4 text-lg text-gray-300">
+        I have strong skills in <span class="text-yellow-300">Python, Flutter, Postman, Figma, and MySQL</span>, and solid expertise in <span class="text-green-300">Data Structures and Algorithms</span>.
+      </p>
+      <p class="mb-4 text-lg text-gray-300">
+        I craft apps that are not only functional but also beautifully designed and user-friendly. From backend logic to sleek UI/UX, I bridge creativity with technology to deliver seamless, high-performance applications. Constantly exploring new tools and frameworks, I aim to create software that inspires, engages, and solves real-world problems.
+      </p>
+      <p class="text-lg text-gray-300">
+        Outside of coding, I enjoy exploring new technologies, solving challenging problems, and continuously improving my skills.  
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 p-6 mt-12">
+    <div class="max-w-7xl mx-auto text-center text-gray-400">
+      <p>&copy; 2025 N.KAILASH. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
